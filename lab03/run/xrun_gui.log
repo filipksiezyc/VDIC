@@ -1,0 +1,88 @@
+TOOL:	xrun	21.03-s009: Started on Nov 17, 2022 at 17:55:32 CET
+xrun
+	-F ../tb/tb.f
+		-F ../tb/../../rtl/rtl_lab03.f
+			vdic_dut_2022_1_2.sv
+		alu_pkg.sv
+		alu_bfm.sv
+		tester.sv
+		scoreboard.sv
+		coverage.sv
+		top.sv
+	-v93
+	+nowarnDSEM2009
+	+nowarnDSEMEL
+	+nowarnCGDEFN
+	+nowarnCOVUTA
+	+nowarnBADPRF
+	+nowarnXCLGNOPTM
+	+nowarnRNDXCELON
+	+nowarnSAWSTP
+	-xmlibdirname INCA_libs_gui
+	+access+r
+	+gui
+	+overwrite
+	-nocopyright
+	-coverage all
+	-covoverwrite
+	-covfile xrun_covfile.txt
+	+UVM_TESTNAME=lab01_example
+	-l xrun_gui.log
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /eda/cadence/2021-22/RHELx86/XCELIUM_21.03.009/tools/methodology/UVM/CDNS-1.1d
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		alu_pkg
+		top
+	bfm.inputWords.reverse();
+	                     |
+xmelab: *W,FUNTSK (../tb/scoreboard.sv,130|22): function called as a task without void'().
+
+	Extracting FSMs for coverage:
+		worklib.tester
+		worklib.scoreboard
+		worklib.coverage
+		worklib.CDN_flop
+		worklib.vdic_dut_2022
+		worklib.top
+	Total FSMs extracted = 0
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+	Building instance specific data structures.
+	Performing constant object marking (COM) analysis.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                312       6
+		Interfaces:               1       1
+		Verilog packages:         1       1
+		Primitives:            4224       4
+		Registers:              383      76
+		Scalar wires:          1825       -
+		Always blocks:          307       1
+		Initial blocks:         311       5
+		Final blocks:             1       1
+		Parallel blocks:          1       1
+		Cont. assignments:      307       1
+		Pseudo assignments:       6       6
+		Assertions:               1       1
+		Covergroup Instances:     0       2
+	Writing initial simulation snapshot: worklib.top:sv
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /eda/cadence/2021-22/RHELx86/XCELIUM_21.03.009/tools/xcelium/files/xmsimrc
+xcelium> source /eda/cadence/2021-22/RHELx86/XCELIUM_21.03.009/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> See ./cov_work/scope/test/icc.com file for message(s) on coverage constant object marking
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  top(top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_72cc9d78_53cef96e.ucm
+  data               :  ./cov_work/scope/test/icc_72cc9d78_53cef96e.ucd
+TOOL:	xrun	21.03-s009: Exiting on Nov 17, 2022 at 18:11:44 CET  (total: 00:16:12)

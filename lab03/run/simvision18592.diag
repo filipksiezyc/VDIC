@@ -1,0 +1,88 @@
+*** Message Type: info ***
+When: Thu Nov 17 17:55:36 CET 2022
+SimVision started.
+Version: TOOL:  simvision       21.03-s009
+User: fksiezyc
+Host: cadence31
+Platform: Linux/x86_64/3.10.0-1160.76.1.el7.x86_64
+Started: Thu Nov 17 17:55:36 CET 2022
+Command: /eda/cadence/2021-22/RHELx86/XCELIUM_21.03.009/tools.lnx86/simvision/bin/simvision.exe -connect dc:cadence31:52615 -nocopyright
+Work Directory: /home/student/fksiezyc/VDIC/lab03/run
+ 
+*** Message Type: info ***
+When: Thu Nov 17 17:55:36 CET 2022
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Thu Nov 17 17:55:38 CET 2022
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Thu Nov 17 17:55:39 CET 2022
+Connect to Simulator
+      Design: worklib.top:sv
+   Languages: verilog assertion
+   Simulator: XM-Sim
+     Version: TOOL:   xmsim   21.03-s009
+        User: fksiezyc
+        Host: cadence31
+Time Started: Thu Nov 17 17:55:34 CET 2022
+  Process ID: 18563
+   Directory: /home/student/fksiezyc/VDIC/lab03/run
+     Command: xrun -F ../tb/tb.f -v93 +nowarnDSEM2009 +nowarnDSEMEL +nowarnCGDEFN +nowarnCOVUTA +nowarnBADPRF +nowarnXCLGNOPTM +nowarnRNDXCELON +nowarnSAWSTP -xmlibdirname INCA_libs_gui +access+r +gui +overwrite -nocopyright -coverage all -covoverwrite -covfile xrun_covfile.txt +UVM_TESTNAME=lab01_example -l xrun_gui.log
+
+ 
+*** Message Type: info ***
+When: Thu Nov 17 17:55:40 CET 2022
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Thu Nov 17 18:11:41 CET 2022
+Delete browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Thu Nov 17 18:11:44 CET 2022
+Exit XM-Sim: user
+      Design: worklib.top:sv
+   Languages: verilog assertion
+   Simulator: XM-Sim
+     Version: TOOL:   xmsim   21.03-s009
+        User: fksiezyc
+        Host: cadence31
+Time Started: Thu Nov 17 17:55:34 CET 2022
+  Process ID: 18563
+   Directory: /home/student/fksiezyc/VDIC/lab03/run
+     Command: xrun -F ../tb/tb.f -v93 +nowarnDSEM2009 +nowarnDSEMEL +nowarnCGDEFN +nowarnCOVUTA +nowarnBADPRF +nowarnXCLGNOPTM +nowarnRNDXCELON +nowarnSAWSTP -xmlibdirname INCA_libs_gui +access+r +gui +overwrite -nocopyright -coverage all -covoverwrite -covfile xrun_covfile.txt +UVM_TESTNAME=lab01_example -l xrun_gui.log
+
+ 
+*** Message Type: error ***
+When: Thu Nov 17 18:11:44 CET 2022
+XM-Sim Crashed:
+      Design: worklib.top:sv
+   Languages: verilog assertion
+   Simulator: XM-Sim
+     Version: TOOL:   xmsim   21.03-s009
+        User: fksiezyc
+        Host: cadence31
+Time Started: Thu Nov 17 17:55:34 CET 2022
+  Process ID: 18563
+   Directory: /home/student/fksiezyc/VDIC/lab03/run
+     Command: xrun -F ../tb/tb.f -v93 +nowarnDSEM2009 +nowarnDSEMEL +nowarnCGDEFN +nowarnCOVUTA +nowarnBADPRF +nowarnXCLGNOPTM +nowarnRNDXCELON +nowarnSAWSTP -xmlibdirname INCA_libs_gui +access+r +gui +overwrite -nocopyright -coverage all -covoverwrite -covfile xrun_covfile.txt +UVM_TESTNAME=lab01_example -l xrun_gui.log
+      Design: worklib.top:sv
+   Languages: verilog assertion
+   Simulator: XM-Sim
+     Version: TOOL:   xmsim   21.03-s009
+        User: fksiezyc
+        Host: cadence31
+Time Started: Thu Nov 17 17:55:34 CET 2022
+  Process ID: 18563
+   Directory: /home/student/fksiezyc/VDIC/lab03/run
+     Command: xrun -F ../tb/tb.f -v93 +nowarnDSEM2009 +nowarnDSEMEL +nowarnCGDEFN +nowarnCOVUTA +nowarnBADPRF +nowarnXCLGNOPTM +nowarnRNDXCELON +nowarnSAWSTP -xmlibdirname INCA_libs_gui +access+r +gui +overwrite -nocopyright -coverage all -covoverwrite -covfile xrun_covfile.txt +UVM_TESTNAME=lab01_example -l xrun_gui.log
+
+Outstanding STRAP Requests:
+        strap::report enable out
+ 
+*** Message Type: info ***
+When: Thu Nov 17 18:11:53 CET 2022
+SimVision Exit.
+ 

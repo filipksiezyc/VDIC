@@ -1,0 +1,123 @@
+*** Message Type: info ***
+When: Mon Nov 07 18:57:16 CET 2022
+SimVision started.
+Version: TOOL:  simvision       21.03-s009
+User: fksiezyc
+Host: cadence37
+Platform: Linux/x86_64/3.10.0-1160.59.1.el7.x86_64
+Started: Mon Nov 07 18:57:16 CET 2022
+Command: /eda/cadence/2021-22/RHELx86/XCELIUM_21.03.009/tools.lnx86/simvision/bin/simvision.exe -connect dc:cadence37:33133 -nocopyright
+Work Directory: /home/student/fksiezyc/VDIC/lab02/run
+ 
+*** Message Type: info ***
+When: Mon Nov 07 18:57:17 CET 2022
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Mon Nov 07 18:57:19 CET 2022
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Mon Nov 07 18:57:20 CET 2022
+Connect to Simulator
+      Design: worklib.vdic_dut_2022_1_0_tb:sv
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:    xmsim   21.03-s009
+        User: fksiezyc
+        Host: cadence37
+Time Started: Mon Nov 07 18:57:15 CET 2022
+  Process ID: 16053
+   Directory: /home/student/fksiezyc/VDIC/lab02/run
+     Command: xrun -F ../tb/tb.f -v93 +nowarnDSEM2009 +nowarnDSEMEL +nowarnCGDEFN +nowarnCOVUTA +nowarnBADPRF +nowarnXCLGNOPTM +nowarnRNDXCELON +nowarnSAWSTP -xmlibdirname INCA_libs_gui +access+r +gui +overwrite -nocopyright -coverage all -covoverwrite -covfile xrun_covfile.txt +UVM_TESTNAME=lab01_example -l xrun_gui.log
+
+ 
+*** Message Type: info ***
+When: Mon Nov 07 18:57:21 CET 2022
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Mon Nov 07 18:57:35 CET 2022
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: error ***
+When: Mon Nov 07 19:11:54 CET 2022
+can't find node "8" in ::tree1
+    (object "::replicator::parts35" method "::replicator::Parts::run" )
+    invoked from within
+"# Compiled -- no source code available
+error "called a copy of a compiled script""
+    (procedure "replicator::capture" line 1)
+    invoked from within
+"replicator::capture $this  -as SV_WAVEFORM -items $_dragsel  -progresscommand [_getProgressCommand configure "Capturing signals..."]"
+    (object "::.waveWindow0.work.user.waveset" method "::WaveSet::_drag" body line 32)
+    invoked from within
+"::.waveWindow0.work.user.waveset _drag SV_WAVEFORM"
+    (in namespace inscope "::WaveSet" script line 1)
+    invoked from within
+"namespace inscope ::WaveSet {::.waveWindow0.work.user.waveset _drag SV_WAVEFORM}"
+    invoked from within
+"list  {SV_WAVEFORM} [namespace inscope ::WaveSet {::.waveWindow0.work.user.waveset _drag SV_WAVEFORM}] {SV_SIGNAL} [namespace inscope ::WaveSet {::.wa..."
+    invoked from within
+"list {copy} [list  {SV_WAVEFORM} [namespace inscope ::WaveSet {::.waveWindow0.work.user.waveset _drag SV_WAVEFORM}] {SV_SIGNAL} [namespace inscope ::W..."
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 $cmd"
+    (procedure "tkdnd::_init_drag" line 10)
+    invoked from within
+"tkdnd::_init_drag 0 $window  "press" 0 0"
+    ("drag" arm line 11)
+    invoked from within
+"switch $method {
+    bindtarget {
+      switch [llength $args] {
+        0 {return [tkdnd::compat::bindtarget0 $window]}
+        1 {return [tkdnd::com..."
+    (procedure "::dnd" line 4)
+    invoked from within
+"::dnd drag .waveWindow0.work.user.waveset.signallist -actions copy -id {16097 ::.waveWindow0.work.user.waveset}"
+    ("eval" body line 1)
+    invoked from within
+"# Compiled -- no source code available
+error "called a copy of a compiled script""
+    (procedure "cwidgets::dnd" line 1)
+    invoked from within
+"cwidgets::dnd drag .waveWindow0.work.user.waveset.signallist -actions copy -id {16097 ::.waveWindow0.work.user.waveset}"
+    ("eval" body line 1)
+    invoked from within
+"# Compiled -- no source code available
+error "called a copy of a compiled script""
+    (procedure "::svdnd" line 1)
+    invoked from within
+"::svdnd drag $win -actions {copy} -id [list [pid] $this]"
+    (object "::.waveWindow0.work.user.waveset" method "::WaveSet::_delayedStartDND" body line 35)
+    invoked from within
+"::.waveWindow0.work.user.waveset _delayedStartDND .waveWindow0.work.user.waveset.signallist 8 12 142 1"
+    (in namespace inscope "::WaveSet" script line 1)
+    invoked from within
+"namespace inscope ::WaveSet {::.waveWindow0.work.user.waveset _delayedStartDND .waveWindow0.work.user.waveset.signallist 8 12 142 1}"
+    ("after" script)
+ 
+*** Message Type: info ***
+When: Mon Nov 07 19:14:48 CET 2022
+Exit XM-Sim: user
+      Design: worklib.vdic_dut_2022_1_0_tb:sv
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:    xmsim   21.03-s009
+        User: fksiezyc
+        Host: cadence37
+Time Started: Mon Nov 07 19:11:28 CET 2022
+  Process ID: 24587
+   Directory: /home/student/fksiezyc/VDIC/lab02/run
+     Command: xrun -F ../tb/tb.f -v93 +nowarnDSEM2009 +nowarnDSEMEL +nowarnCGDEFN +nowarnCOVUTA +nowarnBADPRF +nowarnXCLGNOPTM +nowarnRNDXCELON +nowarnSAWSTP -xmlibdirname INCA_libs_gui +access+r +gui +overwrite -nocopyright -coverage all -covoverwrite -covfile xrun_covfile.txt +UVM_TESTNAME=lab01_example -l xrun_gui.log -s
+
+ 
+*** Message Type: info ***
+When: Mon Nov 07 19:58:00 CET 2022
+Delete waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Mon Nov 07 19:58:04 CET 2022
+SimVision Exit.
+ 
