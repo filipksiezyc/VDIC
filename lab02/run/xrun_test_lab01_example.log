@@ -1,0 +1,203 @@
+TOOL:	xrun	21.03-s009: Started on Nov 15, 2022 at 16:54:16 CET
+xrun
+	-F ../tb/tb.f
+		-F ../tb/../../rtl/rtl_lab02.f
+			vdic_dut_2022_1_1.sv
+		vdic_dut_2022_1_1_tb.sv
+	-v93
+	+nowarnDSEM2009
+	+nowarnDSEMEL
+	+nowarnCGDEFN
+	+nowarnCOVUTA
+	+nowarnBADPRF
+	+nowarnXCLGNOPTM
+	+nowarnRNDXCELON
+	+nowarnSAWSTP
+	-xmlibdirname INCA_libs
+	+overwrite
+	-nocopyright
+	-coverage all
+	-covoverwrite
+	-covfile xrun_covfile.txt
+	-covtest lab01_example
+	+UVM_TESTNAME=lab01_example
+	-l xrun_test_lab01_example.log
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /eda/cadence/2021-22/RHELx86/XCELIUM_21.03.009/tools/methodology/UVM/CDNS-1.1d
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		vdic_dut_2022_1_0_tb
+
+	Extracting FSMs for coverage:
+		worklib.CDN_flop
+		worklib.vdic_dut_2022
+		worklib.vdic_dut_2022_1_0_tb
+	Total FSMs extracted = 0
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+	Building instance specific data structures.
+	Performing constant object marking (COM) analysis.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                309       3
+		Primitives:            4603       4
+		Registers:              381      74
+		Scalar wires:          1825       -
+		Always blocks:          308       2
+		Initial blocks:         310       4
+		Final blocks:             1       1
+		Parallel blocks:          1       1
+		Cont. assignments:      307       1
+		Pseudo assignments:       3       3
+		Assertions:               1       1
+		Covergroup Instances:     0       2
+	Writing initial simulation snapshot: worklib.vdic_dut_2022_1_0_tb:sv
+Loading snapshot worklib.vdic_dut_2022_1_0_tb:sv .................... Done
+xcelium> source /eda/cadence/2021-22/RHELx86/XCELIUM_21.03.009/tools/xcelium/files/xmsimrc
+xcelium> source /eda/cadence/2021-22/RHELx86/XCELIUM_21.03.009/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 1350 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+1350 Test FAILED for op_set=CMD_INV
+Expected:       0  received:       x
+Input arguments used: 0, 18, 27, 202, 3, 237, 474, 0, 396, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 2680 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+2680 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 510, 510, 510, 510, 510, 510, 510, 510, 510, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 4010 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+4010 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 29300 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+29300 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     513
+Input arguments used: 407, 180, 474, 202, 447, 136, 0, 343, 441, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 30630 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+30630 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 510, 510, 510, 510, 510, 510, 510, 510, 510, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 31960 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+31960 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 37320 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+37320 Test FAILED for op_set=CMD_AND
+Expected:     160  received:     513
+Input arguments used: 435, 237, 365, 141, 0, 210, 0, 0, 0, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 57350 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+57350 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     513
+Input arguments used: 373, 0, 293, 0, 269, 485, 378, 0, 0, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 58680 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+58680 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 510, 510, 510, 510, 510, 510, 510, 510, 510, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 60010 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+60010 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 65370 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+65370 Test FAILED for op_set=CMD_AND
+Expected:      20  received:     513
+Input arguments used: 150, 60, 473, 0, 269, 119, 0, 172, 452, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 85420 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+85420 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     513
+Input arguments used: 135, 269, 387, 180, 89, 0, 119, 495, 184, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 86750 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+86750 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 510, 510, 510, 510, 510, 510, 510, 510, 510, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 88080 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+88080 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 89410 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+89410 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 65, 0, 360, 27, 243, 507, 287, 455, 354, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 90740 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+90740 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 510, 510, 510, 510, 510, 510, 510, 510, 510, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 92070 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+92070 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 101380 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+101380 Test FAILED for op_set=CMD_AND
+Expected:     264  received:     513
+Input arguments used: 269, 360, 0, 0, 0, 212, 464, 231, 0, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 105370 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+105370 Test FAILED for op_set=CMD_AND
+Expected:      65  received:     513
+Input arguments used: 329, 114, 424, 315, 0, 147, 65, 0, 455, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 141280 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+141280 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     513
+Input arguments used: 489, 24, 5, 10, 5, 0, 0, 350, 0, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 142610 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+142610 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 510, 510, 510, 510, 510, 510, 510, 510, 510, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 143940 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+143940 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 145270 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+145270 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 0, 153, 129, 27, 0, 83, 0, 0, 0, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 146600 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+146600 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 510, 510, 510, 510, 510, 510, 510, 510, 510, 
+
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,406): (time 147930 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+147930 Test FAILED for op_set=CMD_INV
+Expected:       0  received:     768
+Input arguments used: 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+
+[1;30m[101m-----------------------------------
+----------- Test FAILED -----------
+-----------------------------------[0m
+
+Simulation complete via $finish(1) at time 155925 NS + 0
+../tb/vdic_dut_2022_1_1_tb.sv:377 	$finish;
+xcelium> exit
+See ./cov_work/scope/lab01_example/icc.com file for message(s) on coverage constant object marking
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  vdic_dut_2022_1_0_tb(vdic_dut_2022_1_0_tb)
+  scope    :  scope
+  testname :  lab01_example
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_637a0ad7_2c7ccd9c.ucm
+  data               :  ./cov_work/scope/lab01_example/icc_637a0ad7_2c7ccd9c.ucd
+TOOL:	xrun	21.03-s009: Exiting on Nov 15, 2022 at 16:54:20 CET  (total: 00:00:04)

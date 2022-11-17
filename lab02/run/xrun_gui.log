@@ -1,0 +1,109 @@
+TOOL:	xrun	21.03-s009: Started on Nov 08, 2022 at 23:19:20 CET
+xrun
+	-F ../tb/tb.f
+		-F ../tb/../../rtl/rtl_lab02.f
+			vdic_dut_2022_1_1.sv
+		vdic_dut_2022_1_1_tb.sv
+	-v93
+	+nowarnDSEM2009
+	+nowarnDSEMEL
+	+nowarnCGDEFN
+	+nowarnCOVUTA
+	+nowarnBADPRF
+	+nowarnXCLGNOPTM
+	+nowarnRNDXCELON
+	+nowarnSAWSTP
+	-xmlibdirname INCA_libs_gui
+	+access+r
+	+gui
+	+overwrite
+	-nocopyright
+	-coverage all
+	-covoverwrite
+	-covfile xrun_covfile.txt
+	+UVM_TESTNAME=lab01_example
+	-l xrun_gui.log
+	-s
+Recompiling... reason: file '../tb/vdic_dut_2022_1_1_tb.sv' is newer than expected.
+	expected: Tue Nov  8 23:17:10 2022
+	actual:   Tue Nov  8 23:19:16 2022
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /eda/cadence/2021-22/RHELx86/XCELIUM_21.03.009/tools/methodology/UVM/CDNS-1.1d
+file: ../tb/vdic_dut_2022_1_1_tb.sv
+endtask : aluEnableReset;
+                        |
+xmvlog: *W,UEXPSC (../tb/vdic_dut_2022_1_1_tb.sv,333|24): Ignored unexpected semicolon following SystemVerilog description keyword (aluEnableReset).
+	module worklib.vdic_dut_2022_1_0_tb:sv
+		errors: 0, warnings: 1
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		vdic_dut_2022_1_0_tb
+
+	Extracting FSMs for coverage:
+		worklib.CDN_flop
+		worklib.vdic_dut_2022
+		worklib.vdic_dut_2022_1_0_tb
+	Total FSMs extracted = 0
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+	Generating native compiled code:
+		worklib.vdic_dut_2022_1_0_tb:sv <0x2c80d8e4>
+			streams:  28, words: 65909
+	Building instance specific data structures.
+	Performing constant object marking (COM) analysis.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                309       3
+		Primitives:            4603       4
+		Registers:              374      68
+		Scalar wires:          1825       -
+		Always blocks:          308       2
+		Initial blocks:         310       4
+		Final blocks:             1       1
+		Cont. assignments:      307       1
+		Pseudo assignments:       3       3
+		Assertions:               1       1
+		Covergroup Instances:     0       1
+	Writing initial simulation snapshot: worklib.vdic_dut_2022_1_0_tb:sv
+xcelium> 
+xcelium> source /eda/cadence/2021-22/RHELx86/XCELIUM_21.03.009/tools/xcelium/files/xmsimrc
+xcelium> source /eda/cadence/2021-22/RHELx86/XCELIUM_21.03.009/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> 
+-------------------------------------
+Relinquished control to SimVision...
+# Restoring simulation environment...
+xcelium> input -quiet .reinvoke.sim
+xcelium> file delete .reinvoke.sim
+xcelium> run
+650 NS + 0 (Assertion output stop: vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT = failed)
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,298): (time 650 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+650 Test FAILED for op_set=27
+Expected:       x  received:       0
+Input arguments used: 0, 18, 
+
+xcelium> run
+5080 NS + 0 (Assertion output stop: vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT = failed)
+xmsim: *E,ASRTST (../tb/vdic_dut_2022_1_1_tb.sv,298): (time 5080 NS) Assertion vdic_dut_2022_1_0_tb.scoreboard.verify_result.CHK_RESULT has failed
+5080 Test FAILED for op_set=27
+Expected:     513  received:       0
+Input arguments used: 184, 90, 
+
+xcelium> ^C
+xcelium> exit
+[1;30m[101m-----------------------------------
+----------- Test FAILED -----------
+-----------------------------------[0m
+
+See ./cov_work/scope/test/icc.com file for message(s) on coverage constant object marking
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  vdic_dut_2022_1_0_tb(vdic_dut_2022_1_0_tb)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_06882707_154e95a4.ucm
+  data               :  ./cov_work/scope/test/icc_06882707_154e95a4.ucd
+TOOL:	xrun	21.03-s009: Exiting on Nov 08, 2022 at 23:19:34 CET  (total: 00:00:14)

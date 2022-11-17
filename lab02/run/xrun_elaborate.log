@@ -1,0 +1,61 @@
+TOOL:	xrun	21.03-s009: Started on Nov 15, 2022 at 16:54:16 CET
+xrun
+	-elaborate
+	-l xrun_elaborate.log
+	-F ../tb/tb.f
+		-F ../tb/../../rtl/rtl_lab02.f
+			vdic_dut_2022_1_1.sv
+		vdic_dut_2022_1_1_tb.sv
+	-v93
+	+nowarnDSEM2009
+	+nowarnDSEMEL
+	+nowarnCGDEFN
+	+nowarnCOVUTA
+	+nowarnBADPRF
+	+nowarnXCLGNOPTM
+	+nowarnRNDXCELON
+	+nowarnSAWSTP
+	-xmlibdirname INCA_libs
+	+overwrite
+	-nocopyright
+	-coverage all
+	-covoverwrite
+	-covfile xrun_covfile.txt
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		vdic_dut_2022_1_0_tb
+
+	Extracting FSMs for coverage:
+		worklib.CDN_flop
+		worklib.vdic_dut_2022
+		worklib.vdic_dut_2022_1_0_tb
+	Total FSMs extracted = 0
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+	Generating native compiled code:
+		worklib.CDN_flop:sv <0x27eba26a>
+			streams:   4, words:  1997
+		worklib.vdic_dut_2022:sv <0x683984df>
+			streams:   0, words:     0
+		worklib.vdic_dut_2022_1_0_tb:sv <0x7a5b4183>
+			streams:  33, words: 79138
+	Building instance specific data structures.
+	Performing constant object marking (COM) analysis.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                309       3
+		Primitives:            4603       4
+		Registers:              381      74
+		Scalar wires:          1825       -
+		Always blocks:          308       2
+		Initial blocks:         310       4
+		Final blocks:             1       1
+		Parallel blocks:          1       1
+		Cont. assignments:      307       1
+		Pseudo assignments:       3       3
+		Assertions:               1       1
+		Covergroup Instances:     0       2
+	Writing initial simulation snapshot: worklib.vdic_dut_2022_1_0_tb:sv
+TOOL:	xrun	21.03-s009: Exiting on Nov 15, 2022 at 16:54:16 CET  (total: 00:00:00)
